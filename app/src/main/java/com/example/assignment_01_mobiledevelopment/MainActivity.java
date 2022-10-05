@@ -44,21 +44,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+    public void Calculate(View view) {
+        EditText no_of_hours = (EditText) findViewById(R.id.no_of_hours);
+        EditText hourly_rate = (EditText) findViewById(R.id.hourly_rate);
+        EditText results = (EditText) findViewById(R.id.output);
+        EditText tax_results = (EditText) findViewById(R.id.tax_output);
 
-        TextView out = findViewById(R.id.output);
-        out.setText("Convert");
-        Button btn = findViewById(R.id.submitButton);
-        EditText input = findViewById(R.id.numHours);
-        EditText input2 = findViewById(R.id.hourRate);
 
-        btn.setOnClickListener(new View.OnClickListener(){
-            @Override
+        double hours = Integer.parseInt(no_of_hours.getText().toString());
+        double rate = Integer.parseInt(hourly_rate.getText().toString());
 
-            public void onClick(View view){
-                String txt = input.getText().toString();
-                String res = txt;
-                out.setText(res);
-            }
-        });
+        double tax_result;
+        double result;
+
+        if (hours < 40) {
+            result = hours * rate;
+        } else {
+            result = (double) ((hours - 40) * rate * 1.5 + 40 * rate);
+        }
+        tax_result = result * 0.18;
+
+        results.setText("Total Pay : " + result);
+        tax_results.setText("Total Tax : " + tax_result);
     }
 }

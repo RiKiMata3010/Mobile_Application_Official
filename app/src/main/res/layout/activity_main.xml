@@ -6,26 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/tax_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/output"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"/>
+
+    <EditText
         android:id="@+id/output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/hourRate"
+        android:layout_below="@id/hourly_rate"
         android:layout_centerInParent="true"
-        android:layout_marginTop="2dp"
-        android:text="User Results" />
+        android:layout_marginTop="2dp"/>
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/output"
-        android:layout_marginTop="165dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp"
+        android:onClick="Calculate"
         android:text="Calculate" />
 
     <EditText
-        android:id="@+id/numHours"
+        android:id="@+id/no_of_hours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -37,10 +45,10 @@
         android:inputType="text"/>
 
     <EditText
-        android:id="@+id/hourRate"
+        android:id="@+id/hourly_rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/numHours"
+        android:layout_below="@+id/no_of_hours"
         android:layout_marginStart="99dp"
         android:layout_marginTop="-83dp"
         android:layout_marginEnd="99dp"
