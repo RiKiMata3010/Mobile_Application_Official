@@ -7,10 +7,51 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/aboutActivity"
         android:layout_width="94dp"
         android:layout_height="wrap_content"
-        android:text="About Activity"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="166dp"
+        android:layout_marginEnd="151dp"
+        android:text="About Activity" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutActivity"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="235dp"
+        android:layout_marginEnd="109dp"
+        android:text="Name : Phoenix Armand Ani" />
+
+    <TextView
+        android:id="@+id/studentId"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="128dp"
+        android:text="Student ID : 101336759" />
+
+    <TextView
+        android:id="@+id/college"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/studentId"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="104dp"
+        android:text="College : George Brown College" />
 
 </RelativeLayout>

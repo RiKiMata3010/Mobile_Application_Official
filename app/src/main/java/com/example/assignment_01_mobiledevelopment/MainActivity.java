@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
         tax_result = result * 0.18;
 
-        results.setText("Total Pay : " + result);
-        tax_results.setText("Total Tax : " + tax_result);
+        results.setText("Total Pay : $" + result);
+        tax_results.setText("Total Tax : $" + tax_result);
     }
 }
