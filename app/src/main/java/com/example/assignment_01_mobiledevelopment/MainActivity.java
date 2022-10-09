@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             result = (double) ((hours - 40) * rate * 1.5 + 40 * rate);
         }
+
         tax_result = result * 0.18;
 
         results.setText("Total Pay : $" + result);
